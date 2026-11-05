@@ -1,0 +1,191 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Remove the duplicate `BASE_DIR` assignment and keep only `BASE_DIR = Path(__file__).resolve().parent.parent`": [
+      {
+        "executionId": "56ebd65e-4859-4653-ae55-c426b98d352f",
+        "chatSessionId": "sess_d7fd78a0-2d8b-46be-a56b-d2f867f78585",
+        "timestamp": 1793378952634
+      },
+      {
+        "executionId": "56ebd65e-4859-4653-ae55-c426b98d352f",
+        "chatSessionId": "sess_d7fd78a0-2d8b-46be-a56b-d2f867f78585",
+        "timestamp": 1793379029331
+      }
+    ],
+    "1. Fix settings.py BASE_DIR and environment-driven DEBUG / ALLOWED_HOSTS": [
+      {
+        "executionId": "56ebd65e-4859-4653-ae55-c426b98d352f",
+        "chatSessionId": "sess_d7fd78a0-2d8b-46be-a56b-d2f867f78585",
+        "timestamp": 1793379029489
+      }
+    ],
+    "2.1 Reorder `MIDDLEWARE` in `settings.py` so `CorsMiddleware` is index 0 and `SecurityMiddleware` is index 1": [
+      {
+        "executionId": "2f3b5a5a-0e5c-4f30-bb1b-3a3936143e9f",
+        "chatSessionId": "sess_6e2078d6-35b2-4b60-97b4-e36efce0cde0",
+        "timestamp": 1793379065571
+      },
+      {
+        "executionId": "2f3b5a5a-0e5c-4f30-bb1b-3a3936143e9f",
+        "chatSessionId": "sess_6e2078d6-35b2-4b60-97b4-e36efce0cde0",
+        "timestamp": 1793379250869
+      }
+    ],
+    "2. Fix MIDDLEWARE ordering and add CORS first": [
+      {
+        "executionId": "2f3b5a5a-0e5c-4f30-bb1b-3a3936143e9f",
+        "chatSessionId": "sess_6e2078d6-35b2-4b60-97b4-e36efce0cde0",
+        "timestamp": 1793379251042
+      }
+    ],
+    "3.1 Append `\"drf_yasg\"` to the third-party block of `INSTALLED_APPS` in `settings.py`": [
+      {
+        "executionId": "6cdcc21b-3bdb-4b59-86ec-0278c0450e58",
+        "chatSessionId": "sess_c51c69b6-ae9e-4510-b769-98747a84f5e1",
+        "timestamp": 1793379303460
+      },
+      {
+        "executionId": "6cdcc21b-3bdb-4b59-86ec-0278c0450e58",
+        "chatSessionId": "sess_c51c69b6-ae9e-4510-b769-98747a84f5e1",
+        "timestamp": 1793379337087
+      }
+    ],
+    "3.2 Extend the `REST_FRAMEWORK` dict in `settings.py` with throttling, filter backends, and renderer classes": [
+      {
+        "executionId": "b9a7992a-d70c-4ea2-a889-15a3df8ae3de",
+        "chatSessionId": "sess_f81960b9-7930-4671-9c5b-41eea22e2ca2",
+        "timestamp": 1793379393270
+      },
+      {
+        "executionId": "b9a7992a-d70c-4ea2-a889-15a3df8ae3de",
+        "chatSessionId": "sess_f81960b9-7930-4671-9c5b-41eea22e2ca2",
+        "timestamp": 1793379499953
+      }
+    ],
+    "3. Add drf_yasg to INSTALLED_APPS and extend REST_FRAMEWORK settings": [
+      {
+        "executionId": "b9a7992a-d70c-4ea2-a889-15a3df8ae3de",
+        "chatSessionId": "sess_f81960b9-7930-4671-9c5b-41eea22e2ca2",
+        "timestamp": 1793379500130
+      }
+    ],
+    "4.1 Add `STATIC_ROOT = BASE_DIR / \"staticfiles\"` below the existing `STATIC_URL` line": [
+      {
+        "executionId": "4e500f71-7a4b-49ef-a757-8acfa8c92eec",
+        "chatSessionId": "sess_f40275f6-184d-4837-914f-c0dd1f1ad35f",
+        "timestamp": 1793379521123
+      },
+      {
+        "executionId": "4e500f71-7a4b-49ef-a757-8acfa8c92eec",
+        "chatSessionId": "sess_f40275f6-184d-4837-914f-c0dd1f1ad35f",
+        "timestamp": 1793379543689
+      }
+    ],
+    "4.2 Add the `if not DEBUG:` block for production security headers": [
+      {
+        "executionId": "d804334f-803d-4e02-86ce-af8590b8cdcc",
+        "chatSessionId": "sess_77c3508e-05f3-4236-a216-104b1665046f",
+        "timestamp": 1793379619364
+      },
+      {
+        "executionId": "d804334f-803d-4e02-86ce-af8590b8cdcc",
+        "chatSessionId": "sess_77c3508e-05f3-4236-a216-104b1665046f",
+        "timestamp": 1793379671924
+      }
+    ],
+    "4. Add STATIC_ROOT and production security headers to settings.py": [
+      {
+        "executionId": "d804334f-803d-4e02-86ce-af8590b8cdcc",
+        "chatSessionId": "sess_77c3508e-05f3-4236-a216-104b1665046f",
+        "timestamp": 1793379672125
+      }
+    ],
+    "6.1 Create `scoring/urls.py` with an empty `urlpatterns` list and `app_name = \"scoring\"`": [
+      {
+        "executionId": "389c44be-ee12-4029-acb4-464b023ba3a8",
+        "chatSessionId": "sess_5f471a69-7a65-4ed2-9ecd-c07902051930",
+        "timestamp": 1793379699058
+      },
+      {
+        "executionId": "389c44be-ee12-4029-acb4-464b023ba3a8",
+        "chatSessionId": "sess_5f471a69-7a65-4ed2-9ecd-c07902051930",
+        "timestamp": 1793379716160
+      }
+    ],
+    "6.2 Create `antigaming/urls.py` with an empty `urlpatterns` list and `app_name = \"antigaming\"`": [
+      {
+        "executionId": "d392b7b1-eaed-406c-93df-bafbaa3c6eb2",
+        "chatSessionId": "sess_9b7bf992-65ef-448a-9386-2cfd79c2fab2",
+        "timestamp": 1793379723595
+      },
+      {
+        "executionId": "d392b7b1-eaed-406c-93df-bafbaa3c6eb2",
+        "chatSessionId": "sess_9b7bf992-65ef-448a-9386-2cfd79c2fab2",
+        "timestamp": 1793379763597
+      }
+    ],
+    "6. Create scoring/urls.py and antigaming/urls.py stubs": [
+      {
+        "executionId": "d392b7b1-eaed-406c-93df-bafbaa3c6eb2",
+        "chatSessionId": "sess_9b7bf992-65ef-448a-9386-2cfd79c2fab2",
+        "timestamp": 1793379763810
+      }
+    ],
+    "7.1 Add `drf_yasg` imports and build `schema_view` at the top of `urls.py`": [
+      {
+        "executionId": "31ffd136-47de-4e3d-a703-5cc55fea270d",
+        "chatSessionId": "sess_66d26c33-c3c7-4506-bf1e-dc35355589d3",
+        "timestamp": 1793379824677
+      },
+      {
+        "executionId": "31ffd136-47de-4e3d-a703-5cc55fea270d",
+        "chatSessionId": "sess_66d26c33-c3c7-4506-bf1e-dc35355589d3",
+        "timestamp": 1793380036967
+      }
+    ],
+    "7.2 Add the scoring, antigaming, and Swagger/ReDoc URL patterns to `urlpatterns`": [
+      {
+        "executionId": "abaebc18-0410-404a-9626-d628ac3cdf4d",
+        "chatSessionId": "sess_4fabb875-e059-4c56-b619-c4131ed9bb20",
+        "timestamp": 1793380076102
+      },
+      {
+        "executionId": "abaebc18-0410-404a-9626-d628ac3cdf4d",
+        "chatSessionId": "sess_4fabb875-e059-4c56-b619-c4131ed9bb20",
+        "timestamp": 1793380216893
+      }
+    ],
+    "7. Update CreditWealthBusiness/urls.py with new routes and Swagger docs": [
+      {
+        "executionId": "abaebc18-0410-404a-9626-d628ac3cdf4d",
+        "chatSessionId": "sess_4fabb875-e059-4c56-b619-c4131ed9bb20",
+        "timestamp": 1793380217082
+      }
+    ],
+    "8. Update requirements.txt with new pinned packages": [
+      {
+        "executionId": "d0ebf01d-9e9f-47c0-b199-b096a83818c2",
+        "chatSessionId": "sess_96b5f676-6a6a-41b2-9b85-dbe77ef12ce6",
+        "timestamp": 1793380268425
+      },
+      {
+        "executionId": "d0ebf01d-9e9f-47c0-b199-b096a83818c2",
+        "chatSessionId": "sess_96b5f676-6a6a-41b2-9b85-dbe77ef12ce6",
+        "timestamp": 1793380302767
+      }
+    ],
+    "8.1 Append `drf-yasg==1.21.*` and `django-filter==24.*` to `requirements.txt`": [
+      {
+        "executionId": "d0ebf01d-9e9f-47c0-b199-b096a83818c2",
+        "chatSessionId": "sess_96b5f676-6a6a-41b2-9b85-dbe77ef12ce6",
+        "timestamp": 1793380271503
+      },
+      {
+        "executionId": "d0ebf01d-9e9f-47c0-b199-b096a83818c2",
+        "chatSessionId": "sess_96b5f676-6a6a-41b2-9b85-dbe77ef12ce6",
+        "timestamp": 1793380302592
+      }
+    ]
+  }
+}

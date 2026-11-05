@@ -1,0 +1,28 @@
+# Core
+Django==4.2.*
+djangorestframework==3.15.*
+djangorestframework-simplejwt==5.3.*
+django-environ==0.11.*
+django-cors-headers==4.3.*
+
+# Database
+psycopg2-binary==2.9.*
+
+# Async task queue
+celery==5.3.*
+redis==5.0.*
+django-celery-beat==2.6.*
+django-celery-results==2.5.*
+
+# SMS
+africastalking==1.2.*
+
+# Dev / test
+pytest==8.1.*
+pytest-django==4.8.*
+pytest-cov==5.0.*
+factory-boy==3.3.*
+
+# API docs / filtering
+drf-yasg==1.21.*
+django-filter==24.*
