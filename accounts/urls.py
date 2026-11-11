@@ -1,11 +1,14 @@
 from django.urls import path
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from accounts.views import CurrentUserView, RegisterView
+from accounts.views import MeView
 
 urlpatterns = [
-    path("register/", RegisterView.as_view(), name="register"),
-    path("token/", TokenObtainPairView.as_view(), name="token"),
-    path("token/refresh/", TokenRefreshView.as_view(), name="token-refresh"),
-    path("me/", CurrentUserView.as_view(), name="current-user"),
+    # GET  /api/auth/me/   — current user's profile
+    # PATCH /api/auth/me/  — update profile fields
+    path("me/", MeView.as_view(), name="me"),
 ]
+
+# NOTE: There are intentionally no register/, login/, or token/ endpoints.
+# All authentication flows (email/password, Google, password reset, email
+# verification) are handled client-side by the Firebase SDK.
+# The backend only verifies the Firebase ID token that the client sends.

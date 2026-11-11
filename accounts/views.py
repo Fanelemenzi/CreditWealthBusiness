@@ -1,16 +1,29 @@
-from rest_framework import generics
-from rest_framework.permissions import AllowAny
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework.generics import RetrieveUpdateAPIView
+from rest_framework.permissions import IsAuthenticated
 
-from accounts.serializers import BusinessOwnerSerializer, RegistrationSerializer
+from accounts.serializers import BusinessOwnerSerializer, BusinessOwnerUpdateSerializer
 
 
-class RegisterView(generics.CreateAPIView):
-    permission_classes = [AllowAny]
-    serializer_class = RegistrationSerializer
+class MeView(RetrieveUpdateAPIView):
+    """
+    GET   /api/auth/me/   → return the current user's business profile.
+    PATCH /api/auth/me/   → update profile fields (phone, national_id, etc.).
 
+    Authentication is done by FirebaseAuthentication — the client must include
+    `Authorization: Bearer <Firebase ID token>` on every request.
 
-class CurrentUserView(APIView):
-    def get(self, request):
-        return Response(BusinessOwnerSerializer(request.user).data)
+    There are no register or login endpoints here: sign-up, login (email/password
+    or Google), logout, password reset, and email verification are all handled
+    client-side through the Firebase SDK.
+    """
+
+    permission_classes = [IsAuthenticated]
+    http_method_names = ["get", "patch", "head", "options"]  # no PUT
+
+    def get_serializer_class(self):
+        if self.request.method in ("PATCH",):
+            return BusinessOwnerUpdateSerializer
+        return BusinessOwnerSerializer
+
+    def get_object(self):
+        return self.request.user

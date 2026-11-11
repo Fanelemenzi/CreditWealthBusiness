@@ -1,9 +1,11 @@
 # Core
 Django==4.2.*
 djangorestframework==3.15.*
-djangorestframework-simplejwt==5.3.*
 django-environ==0.11.*
 django-cors-headers==4.3.*
+
+# Firebase Authentication
+firebase-admin==6.5.*
 
 # Database
 psycopg2-binary==2.9.*
